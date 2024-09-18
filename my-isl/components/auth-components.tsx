@@ -21,7 +21,7 @@ export function SignUpForm() {
     setSuccess('');
 
     try {
-      const response = null;
+      const response:any = null;
       // await fetch('/api/auth/signup', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
@@ -94,7 +94,7 @@ export function SignInForm() {
     setError('');
 
     try {
-      const response  = null; 
+      const response:any  = null; 
       // await fetch('/api/auth/signin', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
