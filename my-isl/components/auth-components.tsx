@@ -21,13 +21,14 @@ export function SignUpForm() {
     setSuccess('');
 
     try {
-      const response = await fetch('/api/auth/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
-      });
+      const response = null;
+      // await fetch('/api/auth/signup', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ name, email, password }),
+      // });
 
-      if (response.ok) {
+      if (response?.ok) {
         setSuccess('Account created successfully. Redirecting to login...');
         setTimeout(() => {
           router.push('/login');
@@ -93,13 +94,14 @@ export function SignInForm() {
     setError('');
 
     try {
-      const response = await fetch('/api/auth/signin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+      const response  = null; 
+      // await fetch('/api/auth/signin', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ email, password }),
+      // });
 
-      if (response.ok) {
+      if (response?.ok) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
         router.push('/dashboard');
