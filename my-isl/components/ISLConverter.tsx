@@ -529,9 +529,9 @@ export default function Component() {
                       <TabsTrigger value="signup">Sign Up</TabsTrigger>
                     </TabsList>
 
-                    {/* Login Tab onSuccess={handleAuthSuccess}*/}
+                    {/* Login Tab */}
                     <TabsContent value="login">
-                      <SignIn />
+                      <SignIn onSuccess={() => {}}/>
 
                       <div className="relative mt-4">
                         <div className="absolute inset-0 flex items-center">
@@ -570,7 +570,7 @@ export default function Component() {
 
                     {/* Sign-Up Tab onSuccess={handleAuthSuccess}*/}
                     <TabsContent value="signup">
-                      <SignUp />
+                      <SignUp onSuccess={() => {}} />
                       <div className="relative mt-4">
                         <div className="absolute inset-0 flex items-center">
                           <span className="w-full border-t border-gray-300" />
