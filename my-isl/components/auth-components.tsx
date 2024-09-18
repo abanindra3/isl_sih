@@ -21,22 +21,17 @@ export function SignUpForm() {
     setSuccess('');
 
     try {
-      const response:any = {};
+      // const response = {};
       // await fetch('/api/auth/signup', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify({ name, email, password }),
       // });
 
-      if (false) {
-        setSuccess('Account created successfully. Redirecting to login...');
-        setTimeout(() => {
-          router.push('/login');
-        }, 2000);
-      } else {
-        const data = await response.json();
-        setError(data.message || 'An error occurred during sign-up');
-      }
+    
+        // const data = await response.json();
+        setError('An error occurred during sign-up');
+      
     } catch (error) {
       setError('An error occurred during sign-up');
     }
@@ -94,21 +89,17 @@ export function SignInForm() {
     setError('');
 
     try {
-      const response:any  = {}; 
+      // const response:any  = {}; 
       // await fetch('/api/auth/signin', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify({ email, password }),
       // });
 
-      if (false) {
-        const data = await response.json();
-        localStorage.setItem('token', data.token);
-        router.push('/dashboard');
-      } else {
-        const data = await response.json();
-        setError(data.message || 'Invalid email or password');
-      }
+      
+        // const data = await response.json();
+        setError('Invalid email or password');
+      
     } catch (error) {
       setError('An error occurred during sign-in');
     }
