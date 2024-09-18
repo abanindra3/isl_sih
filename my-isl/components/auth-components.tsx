@@ -28,7 +28,7 @@ export function SignUpForm() {
       //   body: JSON.stringify({ name, email, password }),
       // });
 
-      if (response?.ok) {
+      if (false) {
         setSuccess('Account created successfully. Redirecting to login...');
         setTimeout(() => {
           router.push('/login');
@@ -101,7 +101,7 @@ export function SignInForm() {
       //   body: JSON.stringify({ email, password }),
       // });
 
-      if (response?.ok) {
+      if (false) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
         router.push('/dashboard');
