@@ -187,6 +187,7 @@ export default function Component() {
                     <SelectContent style={{ backgroundColor: 'black', color: 'white' }}>
                       <SelectItem value="english" style={{ color: 'white' }}>English</SelectItem>
                       <SelectItem value="hindi" style={{ color: 'white' }}>Hindi</SelectItem>
+                      <SelectItem value="bengali" style={{ color: 'white' }}>Bengali</SelectItem>
                       <SelectItem value="marathi" style={{ color: 'white' }}>Marathi</SelectItem>
                       <SelectItem value="tamil" style={{ color: 'white' }}>Tamil</SelectItem>
                       <SelectItem value="gujrati" style={{ color: 'white' }}>Gujrati</SelectItem>
@@ -340,9 +341,9 @@ export default function Component() {
                     <TabsTrigger value="signup">Sign Up</TabsTrigger>
                   </TabsList>
 
-                  {/* Login Tab */}
+                  {/* Login Tab onSuccess={handleAuthSuccess}*/}
                   <TabsContent value="login">
-                    <SignIn onSuccess={handleAuthSuccess} />
+                    <SignIn  />
                     
                     <div className="relative mt-4">
                       <div className="absolute inset-0 flex items-center">
@@ -376,9 +377,9 @@ export default function Component() {
                     </Button>
                   </TabsContent>
 
-                  {/* Sign-Up Tab */}
+                  {/* Sign-Up Tab onSuccess={handleAuthSuccess}*/}
                   <TabsContent value="signup">
-                    <SignUp onSuccess={handleAuthSuccess} />
+                    <SignUp  />
                     <div className="relative mt-4">
                       <div className="absolute inset-0 flex items-center">
                         <span className="w-full border-t border-gray-300" />
